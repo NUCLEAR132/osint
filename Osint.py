@@ -10,15 +10,15 @@ def classify_site(link,title):
     link_lower = link.lower() if link else ""
     title_lower = title.lower() if title else ""
     social_sites = {
-        "Facebook" :["facebook.com","facebook","fb","messenger","Facebook","Face_book"]
-        "Youtube" :["youtube.com","youtube","Youtube","youtu.be","youtube.kid"]
+        "Facebook" :["facebook.com","facebook","fb","messenger","Facebook","Face_book"], 
+        "Youtube" :["youtube.com","youtube","Youtube","youtu.be","youtube.kid"], 
         "Telegram" :["telegram.org","t.me","telegram","Telegram"]
     }
     for site, keyword in social_sites.items():
         if any(k in link_lower or k in title_lower for k in keyword):
             return site
     education_sites = {
-        "Udemy" :["udemy.com","udemy","Udemy"]
+        "Udemy" :["udemy.com","udemy","Udemy"], 
         "Coursera" :["coursera.org","coursera","Coursera"]
     }
     for site, keyword in social_sites.items():
